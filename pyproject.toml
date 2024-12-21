@@ -1,6 +1,6 @@
 [project]
 name = "rap-utils"
-version = "0.0.1"
+version = "0.0.2"
 authors = [
   { name="Giles Dring", email="giles@dringtech.com" },
 ]
@@ -8,6 +8,7 @@ description = "A collection of utils for Reproducible Analytical Pipelines"
 dependencies = [
   "petl",
   "pyairtable~=2.0",
+  "fsspec",
   "paramiko",
   "spektrixpython",
 ]
