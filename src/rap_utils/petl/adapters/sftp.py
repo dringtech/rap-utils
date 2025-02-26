@@ -18,3 +18,11 @@ class SftpServer(object):
             list = sftp.listdir(*args, **kwargs)
         ssh.close()
         return list
+    def listdir_attr(self, *args, **kwargs):
+        ssh = SSHClient()
+        ssh.set_missing_host_key_policy(AutoAddPolicy())
+        ssh.connect(self.hostname, **self.remote_args)
+        with ssh.open_sftp() as sftp:
+            list = sftp.listdir_attr(*args, **kwargs)
+        ssh.close()
+        return list

@@ -1,6 +1,6 @@
 [project]
 name = "rap-utils"
-version = "0.0.4"
+version = "0.0.5"
 authors = [
   { name="Giles Dring", email="giles@dringtech.com" },
 ]
