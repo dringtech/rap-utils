@@ -13,4 +13,4 @@ class ParquetView(petl.Table):
         # yield the data rows
         for batch in self.table.to_batches():
             for row in zip(*batch.columns):
-                yield tuple(row)
+                yield tuple(c.as_py() for c in row)
