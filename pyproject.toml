@@ -1,12 +1,13 @@
 [project]
 name = "rap-utils"
-version = "0.0.8"
+version = "0.0.9"
 authors = [
   { name="Giles Dring", email="giles@dringtech.com" },
 ]
 description = "A collection of utils for Reproducible Analytical Pipelines"
 dependencies = [
   "fsspec",
+  "google-analytics-data",
   "paramiko",
   "petl",
   "pyairtable~=2.0",
