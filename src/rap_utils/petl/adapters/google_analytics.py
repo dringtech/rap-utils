@@ -4,7 +4,18 @@ from google.analytics.data_v1beta import BetaAnalyticsDataClient
 
 
 class GoogleAnalytics4(object):
-    """Class encapsulating access to GA4 reports"""
+    """
+    Class encapsulating access to GA4 reports
+
+    Followed instructions https://developers.google.com/analytics/devguides/reporting/data/v1/quickstart?account_type=user
+
+    Working against the **Data API** with a **User Account**.
+
+    1. Generated **Application Default Credentials** `gcloud auth application-default login --scopes="https://www.googleapis.com/auth/cloud-platform,https://www.googleapis.com/auth/analytics.readonly"`
+    2. GA admin added user to GA4
+    3. Create Google cloud project at <cloud.google.com> and enable the Data API
+    4. Make that the default quota project using `gcloud auth application-default set-quota-project <project-id>`    
+    """
 
     def __init__(self):
         self.client = BetaAnalyticsDataClient()
