@@ -1,6 +1,6 @@
 [project]
 name = "rap-utils"
-version = "0.0.9"
+version = "0.0.10"
 description = "A collection of utils for Reproducible Analytical Pipelines"
 authors = [{ name = "Giles Dring", email = "giles@dringtech.com" }]
 requires-python = ">=3.8"
