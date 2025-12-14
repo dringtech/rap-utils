@@ -1,5 +1,6 @@
 import json
 import os
+import urllib
 
 import petl.io.json
 import petl.io.sources
@@ -38,4 +39,7 @@ class Airtable(object):
         return petl.io.sources.MemorySource(bytes(json.dumps(data), encoding='utf-8'))
     
     def get(self, *args, **kwargs) -> petl.io.json.JsonView:
-        return petl.io.json.fromjson(self.source(*args, **kwargs)).unpackdict('fields')
+        try:
+            return petl.io.json.fromjson(self.source(*args, **kwargs)).unpackdict('fields')
+        except urllib.error.HTTPError as err:
+            raise err
